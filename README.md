@@ -1,2 +1,2 @@
-# basic-color-picker2
+# basic-color-picker
 A basic html color picker
