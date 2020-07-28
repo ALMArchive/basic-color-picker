@@ -54,10 +54,12 @@ html, body {
     --color-viewer-width: 120px;
     --color-viewer-height: 120px;
     --color-picker-panel-height-offset: 0;
-    width: var(--color-viewer-width);
+    --color-picker-panel-width-offset: calc(2*var(--border-width));
+    --border-width: 1px;
     height: calc(var(--color-viewer-height) + 3*var(--slider-dim) + var(--color-picker-panel-height-offset));
+    width: calc(var(--color-viewer-width) + var(--color-picker-panel-width-offset));
     background-color: var(--color-picker-background-color);
-    border: 1px solid black;
+    border: var(--border-width) solid black;
 }
 
 /*
