@@ -19,6 +19,7 @@ html, body {
 .color-picker-panel {
     width: 100%;
     height: calc(100% - 3*25px);
+    border: 1px solid black;
 }
 
 /*
