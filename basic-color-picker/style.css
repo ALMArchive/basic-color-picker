@@ -21,8 +21,9 @@ html, body {
     --color-viewer-width: 100%;
     --color-viewer-height: 100%;
     --color-picker-background-color: #d3d3d3;
+    --color-picker-panel-height-offset: calc(2 * -3*var(--slider-dim));
     width: var(--color-viewer-width);
-    height: calc(var(--color-viewer-height) + 3*var(--slider-dim));
+    height: calc(var(--color-viewer-height) + 3*var(--slider-dim) + var(--color-picker-panel-height-offset));
     border: 1px solid black;
 }
 
@@ -44,7 +45,7 @@ html, body {
     appearance: none;
     outline: 0;
     width: 100%;
-    height: 25px;
+    height: var(--slider-dim);
     background: #d3d3d3;
     opacity: 0.7;
     transition: opacity .2s;
