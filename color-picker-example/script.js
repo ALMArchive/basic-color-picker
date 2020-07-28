@@ -1,4 +1,14 @@
 const colorViewer = document.getElementById('color-viewer');
+const colorPickerPanel = document.getElementById('color-picker-panel');
+const colorPickerDisplay = document.getElementById('color-picker-display');
+
+function makeElementVisible(elem) {
+    elem.classList.remove('invisible');
+}
+
+function makeElementInvisible(elem) {
+    elem.classList.add('invisible');
+}
 
 const sliderValues = {
     r: 255,
@@ -51,3 +61,9 @@ function updateSliderValuesFromInputEvent(e) {
         throw 'Invalid id, should be red, green or blue';
     }
 }
+
+window.document.body.addEventListener('click', () => makeElementInvisible(colorPickerPanel));
+colorPickerDisplay.addEventListener('click', (e) => {
+    makeElementVisible(colorPickerPanel);
+    e.stopPropagation();
+});
