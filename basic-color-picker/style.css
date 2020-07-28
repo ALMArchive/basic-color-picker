@@ -17,8 +17,12 @@ html, body {
  */
 
 .color-picker-panel {
-    width: 100%;
-    height: calc(100% - 3*25px);
+    --slider-dim: 25px;
+    --color-viewer-width: 100%;
+    --color-viewer-height: 100%;
+    --color-picker-background-color: #d3d3d3;
+    width: var(--color-viewer-width);
+    height: calc(var(--color-viewer-height) + 3*var(--slider-dim));
     border: 1px solid black;
 }
 
@@ -27,8 +31,8 @@ html, body {
  */
 
 .color-viewer {
-    width: 100%;
-    height: 100%;
+    width: var(--color-viewer-width);
+    height: var(--color-viewer-height);
 }
 
 /*
