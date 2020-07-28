@@ -49,11 +49,14 @@ html, body {
  */
 
 .color-picker-panel {
+    --slider-dim: 25px;
     --color-picker-background-color: #d3d3d3;
-    width: 120px;
-    height: calc(120px + 3*25px);
-    border: 1px solid black;
+    --color-viewer-width: 120px;
+    --color-viewer-height: 120px;
+    width: var(--color-viewer-width);
+    height: calc(var(--color-viewer-height) + 3*var(--slider-dim));
     background-color: var(--color-picker-background-color);
+    border: 1px solid black;
 }
 
 /*
@@ -61,8 +64,8 @@ html, body {
  */
 
 .color-viewer {
-    width: 100%;
-    height: 120px;
+    width: var(--color-viewer-width);
+    height: var(--color-viewer-height);
 }
 
 /*
