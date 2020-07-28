@@ -33,6 +33,7 @@ sliders.map(e => {
     e.addEventListener('input', (e) => {
         updateSliderValuesFromInputEvent(e);
         setColorViewerBackgroundFromSliderValues();
+        setColorDisplayBackgroundFromSliderValues();
     });
 });
 
@@ -46,6 +47,14 @@ function setColorViewerBackground(r, g, b) {
 
 function setColorViewerBackgroundFromSliderValues() {
     setColorViewerBackground(sliderValues.r, sliderValues.g, sliderValues.b);
+}
+
+function setColorDisplayBackground(r, g, b) {
+    setElementBackgroundColor(colorPickerDisplay, r, g, b);
+}
+
+function setColorDisplayBackgroundFromSliderValues() {
+    setColorDisplayBackground(sliderValues.r, sliderValues.g, sliderValues.b);
 }
 
 function updateSliderValuesFromInputEvent(e) {
