@@ -29,6 +29,10 @@ html, body {
     background-color: grey;
 }
 
+.invisible {
+    visibility: hidden;
+}
+
 /*
     color-picker-display styles
  */
