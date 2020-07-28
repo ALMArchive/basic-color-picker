@@ -19,6 +19,7 @@ sliders.map(e => {
     } else {
         throw 'Invalid id, should be red, green or blue';
     }
+    setColorViewerBackgroundFromSliderValues();
     e.addEventListener('input', (e) => {
         updateSliderValuesFromInputEvent(e);
         setColorViewerBackgroundFromSliderValues();
