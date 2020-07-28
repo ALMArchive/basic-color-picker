@@ -53,8 +53,9 @@ html, body {
     --color-picker-background-color: #d3d3d3;
     --color-viewer-width: 120px;
     --color-viewer-height: 120px;
+    --color-picker-panel-height-offset: 0;
     width: var(--color-viewer-width);
-    height: calc(var(--color-viewer-height) + 3*var(--slider-dim));
+    height: calc(var(--color-viewer-height) + 3*var(--slider-dim) + var(--color-picker-panel-height-offset));
     background-color: var(--color-picker-background-color);
     border: 1px solid black;
 }
