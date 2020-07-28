@@ -34,10 +34,11 @@ html, body {
  */
 
 .color-picker-display {
-    width: 64px;
-    height: 64px;
+    --color-picker-display-dim: 64px;
+    width: var(--color-picker-display-dim);
+    height: var(--color-picker-display-dim);
     background-color: white;
-    border: 1px solid grey;
+    border: 1px solid black;
 }
 
 .color-picker-display:hover {
@@ -60,6 +61,12 @@ html, body {
     width: calc(var(--color-viewer-width) + var(--color-picker-panel-width-offset));
     background-color: var(--color-picker-background-color);
     border: var(--border-width) solid black;
+}
+
+.color-picker-panel-offset {
+    position: relative;
+    top: calc((var(--color-picker-display-dim) / 2) - (var(--color-viewer-height) + 3*var(--slider-dim)));
+    left: calc(var(--color-picker-display-dim) / 2);
 }
 
 /*
