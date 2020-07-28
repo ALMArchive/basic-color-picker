@@ -1,4 +1,8 @@
-html, body, .paint-container {
+/*
+    style resets
+ */
+
+html, body {
     height: 100%;
     --background-color: #3b4147;
     background-color: var(--background-color);
@@ -9,4 +13,28 @@ html, body, .paint-container {
     margin: 0;
     box-sizing: border-box;
     user-select: none;
+}
+
+/*
+    general
+ */
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grey-background {
+    background-color: grey;
+}
+
+/*
+    color-picker-display styles
+ */
+
+.color-picker-display {
+    width: 64px;
+    height: 64px;
+    background-color: white;
 }
