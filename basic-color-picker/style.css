@@ -22,9 +22,12 @@ html, body {
     --color-viewer-height: 100%;
     --color-picker-background-color: #d3d3d3;
     --color-picker-panel-height-offset: calc(2 * -3*var(--slider-dim));
-    width: var(--color-viewer-width);
+    --color-picker-panel-width-offset: calc(2*var(--border-width));
+    --border-width: 1px;
     height: calc(var(--color-viewer-height) + 3*var(--slider-dim) + var(--color-picker-panel-height-offset));
-    border: 1px solid black;
+    width: calc(var(--color-viewer-width) + var(--color-picker-panel-width-offset));
+    background-color: var(--color-picker-background-color);
+    border: var(--border-width) solid black;
 }
 
 /*
